@@ -611,7 +611,7 @@ td:first-child {
 	width: 227px;
 }
 
-.func img {
+.func a {
 	margin: 0 auto 19px auto;
 }
 
@@ -624,10 +624,6 @@ td:first-child {
 	margin: 0 auto 4px auto;
 	font-family: "Lato-Heavy";
 	font-size: 18px;
-}
-
-.func span:hover {
-	text-decoration: underline;
 }
 
 .func p {
