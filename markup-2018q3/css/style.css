@@ -789,6 +789,10 @@ td:first-child {
 	margin-bottom: 13px;
 }
 
+.email {
+	min-width: 234px;
+}
+
 .foot_bottom_right a {
 	font-family: "Lato-Light";
 	font-size: 15px;
@@ -799,6 +803,7 @@ td:first-child {
 .foot_bottom_right a:hover {
 	color: white; 
 }
+
 
 
 
