@@ -738,6 +738,11 @@ td:first-child {
 	padding-left: 15px;
 }
 
+/* .foot_right_middle a:hover {
+	padding: 0;
+	width: 100px;
+} */
+
 .foot_middle ul {
 	list-style: none;
 	margin: 0;
@@ -759,11 +764,11 @@ td:first-child {
 }
 
 .foot_left_middle ul {
-	padding-left: 51px;
+	width: 156px;
 }
 
 .foot_right_middle ul {
-	padding-right: 51px;	
+	width: 156px;
 }
 
 .foot_bottom_right {
