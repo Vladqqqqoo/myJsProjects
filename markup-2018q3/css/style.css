@@ -608,11 +608,19 @@ td:first-child {
 	display: flex;
 	flex-direction: column;
 	margin: auto 50px auto 48px;
-	width: 227px;
+	max-width: 227px;
 }
 
 .func a {
 	margin: 0 auto 19px auto;
+	height: 60px;
+}
+
+.func img {
+	width: 60px;
+	height: 60px;
+	transition-property: width, height;
+	transition-duration: .2s;
 }
 
 .func img:hover {
