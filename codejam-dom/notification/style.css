@@ -6,8 +6,17 @@
 .notification {
 	display: flex;
 	flex-direction: column;
+	height: 200px;
+	width: 350px;
 	background-color: dimgrey;
+	border: solid black 1px;
 }
+
+.notification h1 {
+	font-size: 16px;
+	text-align: center;
+}
+
 
 .closeNotification {
 	height: 16px;
