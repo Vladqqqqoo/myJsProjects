@@ -1,2 +1,5 @@
-const abc = document.getElementsByTagName('h1');
-abc[0].style.color = 'red';
+setTimeout(() => {
+	tipsFunc();
+}, 5000);
+
+const strMas = [];

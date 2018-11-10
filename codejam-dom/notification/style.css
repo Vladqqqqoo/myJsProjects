@@ -1,0 +1,20 @@
+.flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.notification {
+	display: flex;
+	flex-direction: column;
+	background-color: dimgrey;
+}
+
+.closeNotification {
+	height: 16px;
+	width: 16px;
+}
+
+.left_arrow, .right_arrow{
+	height: 16px;
+	width: 16px;
+}
