@@ -9,15 +9,19 @@ const strMas = ['Be Flexible. We always plan for delays and try not to get upset
 function tipsFunc() {
 	const notification = document.getElementsByClassName('notification')[0];
 	const isChecked = document.getElementById('checkboxTips');
-	//
+	const tips = document.getElementById('tips');
+	const notifTxt = document.getElementById('textNotification');
+	const exit = document.getElementsByClassName('closeNotification')[0];
+	const leftArrow = document.getElementsByClassName('left_arrow')[0];
+	const rightArrow = document.getElementsByClassName('right_arrow')[0];
+	let count = 0;
+	let i = 0;
 	function closeNotif() {
 		notification.classList.add('hidden');
 		if (isChecked.checked) {
 			localStorage.setItem('openNotification', 'false');
 		}
 	}
-	//
-	let count = 0;
 	function createElement() {
 		count += 1;
 		const div = document.createElement('div');
@@ -25,12 +29,6 @@ function tipsFunc() {
 		div.className = 'tip';
 		return div;
 	}
-	//
-	let i = 0;
-	const tips = document.getElementById('tips');
-	const notifTxt = document.getElementById('textNotification');
-	notifTxt.innerHTML = strMas[i];
-	//
 	function leftSwipe() {
 		if (i > 0) {
 			i -= 1;
@@ -45,7 +43,6 @@ function tipsFunc() {
 		}
 		tips.childNodes[i].classList.add('chosenTip');
 	}
-	//
 	function rightSwipe() {
 		if (i >= tips.childNodes.length - 1) {
 			i = 0;
@@ -60,23 +57,15 @@ function tipsFunc() {
 		}
 		tips.childNodes[i].classList.add('chosenTip');
 	}
-	//
 	const open = localStorage.getItem('openNotification');
 	if (open !== 'false') {
-		notification.classList.remove('hidden');
-		//
-		const exit = document.getElementsByClassName('closeNotification')[0];
-		exit.addEventListener('click', closeNotif);
-		//
+		notifTxt.innerHTML = strMas[i];
 		strMas.map(() => tips.appendChild(createElement()));
 		tips.childNodes[0].classList.add('chosenTip');
-		//
-		const leftArrow = document.getElementsByClassName('left_arrow')[0];
-		const rightArrow = document.getElementsByClassName('right_arrow')[0];
-		//
+		notification.classList.remove('hidden');
+		exit.addEventListener('click', closeNotif);
 		leftArrow.addEventListener('click', leftSwipe);
 		rightArrow.addEventListener('click', rightSwipe);
-		//
 		tips.addEventListener('click', (element) => {
 			const { target: currentElem } = element;
 			if (currentElem !== document.getElementsByClassName('tips')[0]) {
@@ -92,7 +81,6 @@ function tipsFunc() {
 				currentElem.classList.add('chosenTip');
 			}
 		});
-
 		document.addEventListener('keydown', (event) => {
 			if (event.keyCode === 39) {
 				rightSwipe();
@@ -109,4 +97,4 @@ function tipsFunc() {
 
 setTimeout(() => {
 	tipsFunc();
-}, 1000);
+}, 5000);
