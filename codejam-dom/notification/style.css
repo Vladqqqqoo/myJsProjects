@@ -6,9 +6,14 @@
 .notification {
 	display: flex;
 	flex-direction: column;
-	height: 200px;
-	width: 350px;
+	position: fixed;
+	right: 15px;
+	top: 15px;
+	padding: 10px 10px;
+	min-height: 190px;
+	width: 340px;
 	background-color: dimgrey;
+	border-radius: 26px;
 	border: solid black 1px;
 }
 
@@ -17,13 +22,70 @@
 	text-align: center;
 }
 
+#textNotification {
+	margin: 0 0 0 0;
+	height: 110px;
+}
 
 .closeNotification {
+	align-self: flex-end;
 	height: 16px;
 	width: 16px;
+}
+
+.tips_panel {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: auto 0 auto 0;
+}
+
+.closeNotification:hover{
+  filter: drop-shadow(0 0 0 rgb(24, 24, 24)); 
+}
+
+.checkBox{
+  cursor: pointer;
+}
+
+.scroll_tips {
+	display: flex;
+	flex-direction: row;
 }
 
 .left_arrow, .right_arrow{
 	height: 16px;
 	width: 16px;
+}
+
+.right_arrow {
+	margin-right: 15px;
+}
+
+.left_arrow:hover, .right_arrow:hover{
+  filter: drop-shadow(0 0 0 rgb(0, 0, 0));
+}
+
+.tips {
+	display: flex;
+	flex-direction: row;
+	margin: 0 0 0 0;
+	margin: 0 5px 0 1px;
+}
+
+.tip {
+	margin: 4px 2px 0 5px;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  background-color: rgb(125, 170, 159);
+  border-radius: 50px;
+}
+
+.tip:hover {
+	background-color: rgb(67, 83, 81);
+}
+
+.chosenTip{
+  background-color: rgb(31, 37, 37);
 }

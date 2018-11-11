@@ -14,14 +14,29 @@
 		<main>
 			<div class="notification is-hidden">
 				<img class="closeNotification" src="./resourses/close.png" alt="close_icon">
-				<h1>EMAIL TIP OF THE DAY</h1>
-				<p id="textNotification">Be Flexible.We always plan for delays and try not to get upset when things inevitably go wrong. 
-					Patience is extremely important when traveling!</p>
-				<input id="checkboxTips" type="checkbox">
-				<label for="checkboxTips">Disable Tips</label>
-				<img class="left_arrow" src="./resourses/left-arrow.png" alt="left-arrow_icon">
-				<img class="right_arrow" src="./resourses/right-arrow.png" alt="right-arrow_icon">
-				<div class="tips" id="tips"></div>
+				<article>
+					<h1>EMAIL TIP OF THE DAY</h1>
+					<p id="textNotification">Be Flexible.We always plan for delays and try not to get upset when things inevitably go wrong. 
+						Patience is extremely important when traveling!</p>
+				</article>
+				<nav class="tips_panel">
+					<form class="sendCheck" action="">
+						<input id="checkboxTips" type="checkbox">
+						<label for="checkboxTips">Disable Tips</label>
+					</form>
+					<div class="scroll_tips">
+						<img class="left_arrow" src="./resourses/left-arrow.png" alt="left-arrow_icon">
+						<div class="tips" id="tips">
+							<div class="tip"></div>
+							<div class="tip"></div>
+							<div class="tip"></div>
+							<div class="tip"></div>
+							<div class="tip"></div>
+							<div class="tip"></div>
+						</div>
+						<img class="right_arrow" src="./resourses/right-arrow.png" alt="right-arrow_icon">
+					</div>
+				</nav>
 			</div>
 			<p>Express Travel has been in business since 1989. Our service standards are one of the highest in the industry 
 				earning us numerous awards and recognitions including: national Travel Agency of the Year, top ten woman owned 
