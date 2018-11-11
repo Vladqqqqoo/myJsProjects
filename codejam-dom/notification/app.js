@@ -92,6 +92,18 @@ function tipsFunc() {
 				currentElem.classList.add('chosenTip');
 			}
 		});
+
+		document.addEventListener('keydown', (event) => {
+			if (event.keyCode === 39) {
+				rightSwipe();
+			}
+			if (event.keyCode === 37) {
+				leftSwipe();
+			}
+			if (event.keyCode === 27) {
+				closeNotif();
+			}
+		});
 	}
 }
 
