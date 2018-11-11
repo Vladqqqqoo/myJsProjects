@@ -1,0 +1,21 @@
+{
+  "name": "codejam-dom",
+  "version": "1.0.0",
+  "description": "Code Jam 'DOM, DOM Events'",
+  "main": "app.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/vladqqqqoo-2018Q3"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/rolling-scopes-school/vladqqqqoo-2018Q3#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
