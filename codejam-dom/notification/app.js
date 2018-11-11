@@ -64,6 +64,7 @@ function tipsFunc() {
 	const open = localStorage.getItem('openNotification');
 	if (open !== 'false') {
 		notification.classList.remove('hidden');
+		//
 		const exit = document.getElementsByClassName('closeNotification')[0];
 		exit.addEventListener('click', closeNotif);
 		//
@@ -75,6 +76,22 @@ function tipsFunc() {
 		//
 		leftArrow.addEventListener('click', leftSwipe);
 		rightArrow.addEventListener('click', rightSwipe);
+		//
+		tips.addEventListener('click', (element) => {
+			const { target: currentElem } = element;
+			if (currentElem !== document.getElementsByClassName('tips')[0]) {
+				for (let j = 0; j < tips.children.length; j += 1) {
+					if (tips.children[j] === currentElem) {
+						i = j;
+						notifTxt.innerHTML = strMas[i];
+					}
+					if (tips.children[j].classList.contains('chosenTip')) {
+						tips.children[j].classList.remove('chosenTip');
+					}
+				}
+				currentElem.classList.add('chosenTip');
+			}
+		});
 	}
 }
 
