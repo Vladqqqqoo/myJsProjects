@@ -30,11 +30,27 @@ function tipsFunc() {
 	const tips = document.getElementById('tips');
 	const notifTxt = document.getElementById('textNotification');
 	notifTxt.innerHTML = strMas[i];
+	//
 	function leftSwipe() {
 		if (i > 0) {
 			i -= 1;
 		} else {
 			i = strMas.length - 1;
+		}
+		notifTxt.innerHTML = strMas[i];
+		for (let j = 0; j < tips.childNodes.length; j += 1) {
+			if (tips.childNodes[j].classList.contains('chosenTip')) {
+				tips.childNodes[j].classList.remove('chosenTip');
+			}
+		}
+		tips.childNodes[i].classList.add('chosenTip');
+	}
+	//
+	function rightSwipe() {
+		if (i >= tips.childNodes.length - 1) {
+			i = 0;
+		} else {
+			i += 1;
 		}
 		notifTxt.innerHTML = strMas[i];
 		for (let j = 0; j < tips.childNodes.length; j += 1) {
@@ -58,6 +74,7 @@ function tipsFunc() {
 		const rightArrow = document.getElementsByClassName('right_arrow')[0];
 		//
 		leftArrow.addEventListener('click', leftSwipe);
+		rightArrow.addEventListener('click', rightSwipe);
 	}
 }
 
