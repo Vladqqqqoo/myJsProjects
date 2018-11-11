@@ -1,18 +1,26 @@
+body{
+	margin: 0;
+}
+
 .flex-container {
 	display: flex;
 	flex-direction: column;
+	height: 100vh;
+	padding-left: 10px;
+	background: url(../resourses/bg_image.jpg)
 }
 
 .notification {
 	display: flex;
 	flex-direction: column;
 	position: fixed;
-	right: 15px;
-	top: 15px;
+	right: 10px;
+	top: 10px;
 	padding: 10px 10px;
 	min-height: 190px;
 	width: 340px;
-	background-color: dimgrey;
+	background-color: #fef5d8;
+	opacity: 0.8;
 	border-radius: 26px;
 	border: solid black 1px;
 }
@@ -78,14 +86,18 @@
   width: 8px;
   height: 8px;
   cursor: pointer;
-  background-color: rgb(125, 170, 159);
+  background-color: #94b5c2;
   border-radius: 50px;
 }
 
 .tip:hover {
-	background-color: rgb(67, 83, 81);
+	background-color: #423c6d;
 }
 
 .chosenTip{
   background-color: rgb(31, 37, 37);
+}
+
+.content-article {
+	max-width: 950px;
 }
