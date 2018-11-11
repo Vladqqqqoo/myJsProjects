@@ -26,21 +26,38 @@ function tipsFunc() {
 		return div;
 	}
 	//
+	let i = 0;
+	const tips = document.getElementById('tips');
+	const notifTxt = document.getElementById('textNotification');
+	notifTxt.innerHTML = strMas[i];
+	function leftSwipe() {
+		if (i > 0) {
+			i -= 1;
+		} else {
+			i = strMas.length - 1;
+		}
+		notifTxt.innerHTML = strMas[i];
+		for (let j = 0; j < tips.childNodes.length; j += 1) {
+			if (tips.childNodes[j].classList.contains('chosenTip')) {
+				tips.childNodes[j].classList.remove('chosenTip');
+			}
+		}
+		tips.childNodes[i].classList.add('chosenTip');
+	}
+	//
 	const open = localStorage.getItem('openNotification');
 	if (open !== 'false') {
 		notification.classList.remove('hidden');
 		const exit = document.getElementsByClassName('closeNotification')[0];
 		exit.addEventListener('click', closeNotif);
 		//
-		const i = 0;
-		const notTxt = document.getElementById('textNotification');
-		notTxt.innerHTML = strMas[i];
-		//
-		const tips = document.getElementById('tips');
-		//
 		strMas.map(() => tips.appendChild(createElement()));
 		tips.childNodes[0].classList.add('chosenTip');
 		//
+		const leftArrow = document.getElementsByClassName('left_arrow')[0];
+		const rightArrow = document.getElementsByClassName('right_arrow')[0];
+		//
+		leftArrow.addEventListener('click', leftSwipe);
 	}
 }
 
