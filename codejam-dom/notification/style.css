@@ -10,6 +10,7 @@ body{
 	background: url(../resourses/bg_image.jpg)
 }
 
+
 .notification {
 	display: flex;
 	flex-direction: column;
@@ -23,6 +24,10 @@ body{
 	opacity: 0.8;
 	border-radius: 26px;
 	border: solid black 1px;
+}
+
+.hidden{
+  display: none;
 }
 
 .notification h1 {
@@ -95,7 +100,7 @@ body{
 }
 
 .chosenTip{
-  background-color: rgb(31, 37, 37);
+  background-color: #423c6d;
 }
 
 .content-article {
